@@ -16,11 +16,14 @@ global mtime f Qg Qf trcf trcp S
 global deltaSbar lamdad lamdahg lamdahf
 global Trc0 CbrsTrc R2Trc R4mTrc R5Trc R6Trc tsTrc
 
-% Constants
+% Constants and volume fluxes
 box_const
 load salt_flux_clim
 
-%% Load model outputs
+%% Load Fraser O2 climatology
+% This is only a test. O2 is a bad conservative tracer because of the
+% sources/sinks and air sea flux.
+
 load('data/frasero2.mat','o2_m')
 
 f = f(:); mtime = mtime(:); Qg = Qg(:); Qf = Qf(:);
@@ -38,8 +41,12 @@ mt2 = [mt2(end)-366; mt2; mt2(1)+366];
 trcf = interp1(mt2,o2_m,mtime);
 trcp = zeros(size(trcf));
 
+% initial conditions
+Trc_init = ones(6, 1)*0;
+
 %% Calcualte tracer concentration
-trc = ones(6, length(mtime))*Trc0;
+trc = zeros(6, length(mtime));
+trc(:, 1) = Trc_init;
 
 delta = 1;
 kk    = 0; % Counter

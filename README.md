@@ -80,7 +80,9 @@ Run the model with following steps:
 
 For tracer model - 
 
-(3) Run 'box_tracer.m' or 'box_tracer_init.m' depends on you case.
+(4) Prepare you forcing file. The forcing file should be a time series of tracer concentration in 1. Fraser River and 2. Pacific Ocean
+
+(3) Run 'box_tracer.m' or 'box_tracer_init.m' depending on you case.
 
 **Make sure data of forcing is renewed if the model time is after Oct 2014.**
 
@@ -100,5 +102,5 @@ Revision
 ## 2015/02/12
 Add section 'Data used as boundary condition' and 'Run the model with following steps'.
 ## 2017/08/20
-Version 1.1
+Update to ver 1.1.
 --------------------------------

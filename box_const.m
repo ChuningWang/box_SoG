@@ -61,7 +61,7 @@ omegahm = (1e-3); % [m/s] !!!!!!!!!!!!!!!!!! Not consistent with reference
 omegaf  = 0.025e-3; % [m/s]
 
 % Salinity [Li et al. 1999]
-% Non-dimensionalize
+% Non-dimensional Numbers
 lamdad  = hu/hl;
 lamdahg = Vh/Vg;
 lamdahf = Vh/Vf;
@@ -75,8 +75,13 @@ R6      = ts/tr;
 % R6 = 0.12; % In Li et al. 1999 they 'choose' 0.12
 
 %% for tracers
+% Reference Tracer Concentration
 Trc0    = 1;
+
+% Cg*beta*rho0*Trc0
 CbrsTrc = Cbrs*Trc0/S0;
+
+% Non-dimensional Numbers
 R2Trc   = omegag*Ag/CbrsTrc;
 R4mTrc  = omegahm*Ah/CbrsTrc;
 R5Trc   = omegaf*Af/CbrsTrc;

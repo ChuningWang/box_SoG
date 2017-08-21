@@ -21,7 +21,7 @@ box_const
 load('salt_flux.mat', 'mtime', 'f', 'Qg', 'Qf', 'S')
 
 %% Load tracer data and initial conditions
-% here I use prescribed values in river and Pacific Ocean, and
+% here I use a prescribed values in river and zeros in Pacific Ocean, and
 % initiated with zeros (none tracers in Salish Sea).
 
 % Load your river/pacific tracer concentration here
@@ -31,11 +31,11 @@ trcp = zeros(size(mtime));
 trcp(365*10+1:end) = 2;
 
 % initial conditions
-Trc_init = ones(6, 1)*0/Trc0;
+Trc_init = ones(6, 1)/Trc0*0;
 
 %% Calcualte tracer concentration
 trc = zeros(6, length(mtime));
 trc(:, 1) = Trc_init;
 trc = rk_solver(trc(:,1),mtime,@odefunc_tracer);
 
-trc = trc*Trc0;
+trc = trc*Trc0

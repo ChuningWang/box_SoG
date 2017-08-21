@@ -95,12 +95,16 @@ Other functions are some other tries and are not polished. Attempt to calculate 
 but was discarded due to lack of essential information.
 
 --------------------------------
+
 Chuning Wang
 2014/07/09
+
 --------------------------------
+
 Revision
 ## 2015/02/12
 Add section 'Data used as boundary condition' and 'Run the model with following steps'.
 ## 2017/08/20
 Update to ver 1.1.
+
 --------------------------------

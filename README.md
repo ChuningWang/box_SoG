@@ -47,7 +47,7 @@ New scripts for tracer flux:
 
 odefunc_tracer.m -- Governing Equations of the tracer model.
 
-box_tracer_init.m -- Similar to box_init.m, calculate initial condition with climatology set-up. For tracers, it is not necessary to run climatology first; this script mostly serves as a test case.
+box_tracer_clim.m -- Run the tracer model with climatology set-up. This script mostly serves as a test case.
 
 box_tracer.m -- Similar to box_rt.m, real-time run. Keep in mind that for tracers, it is not necessary to run climatology first. 
 

@@ -2,9 +2,8 @@
 % model
 %
 % The usage of this script is similar to box_rt.m. Instead of salinity, a
-% tracer concentration (in this example, fraser O2) is needed to drive this
-% model. O2 is not a very good tracer in the system since it is not
-% conservative. In further cases other tracers should be used.
+% tracer concentration (in this example, prescribed values) is needed to
+% drive this model.
 %
 % Chuning Wang
 % 2017/08/20

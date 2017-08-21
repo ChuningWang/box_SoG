@@ -1,5 +1,5 @@
-% Calculate initial conditions for tracer fluxes and concentration based on
-% the output of box model
+% Calculate tracer fluxes and concentration based on the output of box
+% model (climatology run).
 %
 % The usage of this script is similar to box_init.m. Instead of salinity, a
 % tracer concentration (in this example, fraser O2) is needed to drive this

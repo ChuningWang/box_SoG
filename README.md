@@ -4,7 +4,7 @@ Box Model for volume transport in the Georgia-Haro-JdF system.
 
 The box model divides the system into 6 boxes (2 layers for each basin) and calculate the volume and salt flux based on a parametrization of salinity. Details in:
 
-Wang, C., 2015. Oxygen budgets and productivity estimates in the Strait of Georgia from a continuous ferry-based monitoring system. Master¡¯s thesis, The University of British Columbia.
+Wang, C., 2015. Oxygen budgets and productivity estimates in the Strait of Georgia from a continuous ferry-based monitoring system. Master's thesis, The University of British Columbia.
 
 Li, M., Gargett, A. E. & Denman, K. L. 1999 Seasonal and interannual variability of estuarine circulation in a box model of the Strait of Georgia and Juan de Fuca Strait. Atmosphere-Ocean 37, 1-19
 
@@ -33,13 +33,13 @@ Some other useful functions and tools in tools/:
 
 box_sep_depth.m -- discussion separation depth and its influence on the results.
 
-box-coef.m -- get Cg*beta*rho0 (eq 1.6) using CTD measurements.
+box_coef.m -- get Cg\*beta\*rho0 (eq 1.6) using CTD measurements.
 
 strCTD -- read STRATOGEM and JEMS CTD profiles and average weighted by hypsography.
 
 box_plot.m -- make all the plots for the manuscript/thesis (trashed in the new version).
 
-*** Version 1.1 ***
+## Version 1.1
 
 A tracer model is added to calculate conservative tracer flux in the system. The tracer model uses the same ODEs, and it is driven by the outputs of the salt budget model. That is, it run the tracer model, you need to run the salt budget model first and make sure it covers the time range of your tracer model. Why not integrate the tracer model into the salt budget model? Well, first, it is written long after the original scripts, it is easier just to separate them from the code 2 years ago. Second, it takes extra steps to calculate the tracer flux, may just slow down the calculation if the tracer flux is not desired.
 
@@ -55,12 +55,12 @@ box_tracer.m -- Similar to box_rt.m, real-time run. Keep in mind that for tracer
 
 Data as external forcing:
 
-Fraser River discharge -- data/fraserHistorical/*.txt
+Fraser River discharge -- data/fraserHistorical/\*.txt
 Downloaded from https://wateroffice.ec.gc.ca/report/report_e.html?type=realTime&stn=08MF005
 So far data from Jan 1980 to Oct 2014 are archived.
 Renew the dataset from the website above to get recent data.
 
-Englishman River discharge -- data/englishmanHistorical/*.txt
+Englishman River discharge -- data/englishmanHistorical/\*.txt
 Downloaded from https://wateroffice.ec.gc.ca/report/report_e.html?type=realTime&stn=08MF005
 So far data from Jan 1980 to Oct 2014 are archived.
 Renew the dataset from the website above to get recent data.
@@ -80,27 +80,25 @@ Run the model with following steps:
 
 For tracer model - 
 
-(3) Run ¡®box_tracer.m¡¯ or ¡®box_tracer_init.m¡¯ depends on you case.
+(3) Run 'box_tracer.m' or 'box_tracer_init.m' depends on you case.
 
-*** Make sure data of forcing is renewed if the model time is after Oct 2014.
+**Make sure data of forcing is renewed if the model time is after Oct 2014.**
 
 --------------------------------
 
-Other functions are some other tries and are not polished. Attempt to calculate heat flux can be find in
+Other functions are some other tries and are not polished. Attempt to calculate heat flux can be find on *ocean*
 
-/ocean/cnwang/courses/eosc511/project/code
+*/ocean/cnwang/courses/eosc511/project/code*
 
 but was discarded due to lack of essential information.
 
-================================
+--------------------------------
 Chuning Wang
 2014/07/09
-================================
+--------------------------------
 Revision
+## 2015/02/12
 Add section 'Data used as boundary condition' and 'Run the model with following steps'.
-2015/02/12
+## 2017/08/20
 Version 1.1
-2017/08/20
-================================
-
-
+--------------------------------
